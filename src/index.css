@@ -5,6 +5,6 @@
 
 .phone-wallpaper{
     background-image: url('/wallpaper.png');
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
 }
