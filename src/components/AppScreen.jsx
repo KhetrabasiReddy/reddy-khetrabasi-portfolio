@@ -7,7 +7,7 @@ const AppScreen = ({ title, children, onClose }) => {
         <h2 className="text-sm font-semibold dark:text-white">{title}</h2>
         <button
           onClick={onClose}
-          className="text-red-500 hover:text-red-700 text-sm font-bold"
+          className="text-red-500 cursor-pointer hover:text-red-700 text-sm font-bold"
         >
           ❌
         </button>
