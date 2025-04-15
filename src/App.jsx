@@ -25,7 +25,7 @@ import Education from './components/EducationApp';
 import Technologies from './components/Technologies';
 import ProjectApp from './components/ProjectApp';
 import ThemeToggle from './components/ThemeToggle';
-import ThemeCustomizer from './components/ThemeCustomizer';
+// import ThemeCustomizer from './components/ThemeCustomizer';
 import CameraApp from './components/CameraApp';
 
 const App = () => {
@@ -53,8 +53,8 @@ const App = () => {
         return <ProjectApp onClose={closeApp} />;
       case 'Theme Toggle':
         return <ThemeToggle onClose={closeApp} />;
-      case 'Theme Customizer':
-        return <ThemeCustomizer onClose={closeApp} />;
+      // case 'Theme Customizer':
+      //   return <ThemeCustomizer onClose={closeApp} />;
       case 'Camera':
         return <CameraApp onClose={closeApp} />;
       default:
