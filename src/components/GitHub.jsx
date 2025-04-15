@@ -1,17 +1,20 @@
 import React from 'react';
 import AppScreen from './AppScreen';
-
+import { useEffect } from 'react';
 const GitHub = ({ onClose }) => {
+    useEffect(() => {
+       window.open("https://github.com/KhetrabasiReddy", "_blank");
+       setTimeout(() => {
+         onClose();
+       }, 1000);// close the app screen after opening
+     }, []);
+
+
   return (
     <AppScreen title="GitHub" onClose={onClose}>
-      <a
-        href="https://github.com/your-github-username"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-purple-700 underline dark:text-purple-300"
-      >
-        Check out my GitHub Repos
-      </a>
+      <div className="p-4 text-center">
+        <p className="text-gray-600">Opening GitHub Profile...</p>
+      </div>
     </AppScreen>
   );
 };

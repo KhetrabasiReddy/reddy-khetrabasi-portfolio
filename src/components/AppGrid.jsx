@@ -46,7 +46,7 @@ import resume from '../assets/resume-image.png';
 const AppGrid = ({ onAppClick }) => {
   const apps = [
     { name: 'About Me', image: aboutMe },
-    { name: 'LinkedIn', image: linkedin },
+    { name: 'LinkedIn', image: linkedin},
     { name: 'GitHub', image: github },
     { name: 'Contact', image: contact },
     { name: 'Resume', image: resume },

@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AppScreen from './AppScreen';
 
-const LinkedIn = ({ onClose }) => {
+const LinkedInApp = ({ onClose }) => {
+  useEffect(() => {
+    window.open("https://www.linkedin.com/in/khetrabasi-reddy-b0ba77224/", "_blank");
+
+    setTimeout(() => {
+      onClose();
+    }, 1000);// close the app screen after opening
+  }, []);
+
   return (
     <AppScreen title="LinkedIn" onClose={onClose}>
-      <a
-        href="https://www.linkedin.com/in/your-username"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-600 underline dark:text-blue-400"
-      >
-        Visit my LinkedIn Profile
-      </a>
+      <div className="p-4 text-center">
+        <p className="text-gray-600">Opening LinkedIn Profile...</p>
+      </div>
     </AppScreen>
   );
 };
 
-export default LinkedIn;
+export default LinkedInApp;

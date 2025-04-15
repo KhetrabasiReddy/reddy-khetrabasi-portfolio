@@ -1,17 +1,21 @@
 import React from 'react';
 import AppScreen from './AppScreen';
+import { useEffect } from 'react';
 
 const ResumeApp = ({ onClose }) => {
+
+  useEffect(() => {
+      window.open("/Khetrabasi.pdf", "_blank");
+      setTimeout(() => {
+        onClose();
+      }, 1000);// close the app screen after opening
+    }, []);
+
   return (
     <AppScreen title="Resume" onClose={onClose}>
-      <a
-        href="/path-to-resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-green-700 underline dark:text-green-400"
-      >
-        Download My Resume (PDF)
-      </a>
+       <div className="p-4 text-center">
+        <p className="text-gray-600">Opening Resume...</p>
+      </div>
     </AppScreen>
   );
 };

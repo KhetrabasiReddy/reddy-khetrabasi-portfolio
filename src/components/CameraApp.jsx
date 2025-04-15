@@ -1,28 +1,28 @@
-
-
 import React, { useEffect, useRef, useState } from 'react';
 import AppScreen from './AppScreen';
 
 const CameraApp = ({ onClose }) => {
   const videoRef = useRef(null);
-  const streamRef = useRef(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
-  const stopStream = () => {
-    const stream = streamRef.current;
-    if (stream) {
-      stream.getTracks().forEach((track) => {
-        track.stop();
+  const stopCamera = () => {
+    const video = videoRef.current;
+    if (video && video.srcObject) {
+      const stream = video.srcObject;
+      const tracks = stream.getTracks();
+      tracks.forEach((track) => {
+        try {
+          track.stop();
+        } catch (err) {
+          console.error('Error stopping track:', err);
+        }
       });
-      streamRef.current = null;
-    }
-    if (videoRef.current) {
-      videoRef.current.srcObject = null;
+      video.srcObject = null;
     }
   };
 
   const handleClose = () => {
-    stopStream();
+    stopCamera();
     onClose();
   };
 
@@ -30,7 +30,6 @@ const CameraApp = ({ onClose }) => {
     const startCamera = async () => {
       try {
         const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        streamRef.current = stream;
         if (videoRef.current) {
           videoRef.current.srcObject = stream;
         }
@@ -43,7 +42,7 @@ const CameraApp = ({ onClose }) => {
     startCamera();
 
     return () => {
-      stopStream();
+      stopCamera();
     };
   }, []);
 
