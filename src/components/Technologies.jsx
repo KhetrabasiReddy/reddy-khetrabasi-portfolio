@@ -31,25 +31,25 @@ import AppScreen from './AppScreen';
 
 const techCategories = {
   Frontend: [
-    { name: 'HTML', image: '/public/techImages/html-img.png' },
-    { name: 'CSS', image: '/public/techImages/css-img.png' },
-    { name: 'JavaScript', image: '/public/techImages/java-script-img.png' },
-    { name: 'React', image: '/public/techImages//react-img.png' },
-    { name: 'Bootstrap', image: '/public/techImages/bootstrap-img.png' },
+    { name: 'HTML', image: 'techImages/html-img.png' },
+    { name: 'CSS', image: 'techImages/css-img.png' },
+    { name: 'JavaScript', image: 'techImages/java-script-img.png' },
+    { name: 'React', image: 'techImages//react-img.png' },
+    { name: 'Bootstrap', image: 'techImages/bootstrap-img.png' },
   ],
   Backend: [
-    { name: 'Java', image: '/public/techImages/java-img.png' },
-    { name: 'Spring Boot', image: '/public/techImages/spring-boot-img.png' },
-    { name: 'Hibernate', image: '/public/techImages/hibernate-ar21.svg' }, // if you add
-    { name: 'JPA', image: '/public/techImages/jpa-img.jpg' },             // if you add
-    { name: 'JDBC', image: '/public/techImages/jdbc-img.webp' },           // if you add
-    { name: 'MySQL', image: '/public/techImages/mysql-img.png' },
-    { name: 'REST API', image: '/public/techImages/restapi-img.png' },    // if you add
+    { name: 'Java', image: 'techImages/java-img.png' },
+    { name: 'Spring Boot', image: 'techImages/spring-boot-img.png' },
+    { name: 'Hibernate', image: 'techImages/hibernate-ar21.svg' }, // if you add
+    { name: 'JPA', image: 'techImages/jpa-img.jpg' },             // if you add
+    { name: 'JDBC', image: 'techImages/jdbc-img.webp' },           // if you add
+    { name: 'MySQL', image: 'techImages/mysql-img.png' },
+    { name: 'REST API', image: 'techImages/restapi-img.png' },    // if you add
   ],
   Tools: [
-    { name: 'Git', image: '/public/techImages/git-img.png',},
-    { name: 'Postman', image: '/public/techImages/postman-img.png'},
-    { name: 'ChatGPT', image: '/public/techImages/chatgpt-img.svg'}
+    { name: 'Git', image: 'techImages/git-img.png',},
+    { name: 'Postman', image: 'techImages/postman-img.png'},
+    { name: 'ChatGPT', image: 'techImages/chatgpt-img.svg'}
   ]
 };
 
